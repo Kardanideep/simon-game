@@ -32,7 +32,7 @@ function btnFlesh(btn) {
 function levalUp() {
   userSeq = [];
   leval++;
-  h2.innerText = `leval ${leval}`;
+  h2.innerText = `level ${leval}`;
 
   let rendInx = Math.floor(Math.random() * 3);
   let rendColor = btns[rendInx];
