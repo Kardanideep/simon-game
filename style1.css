@@ -29,20 +29,27 @@
   }
 
   .redirect-btn {
-    padding: 15px 15px;
-    background-color: #f1c40f;
-    color: rgb(6, 6, 6);
-    font-size: 16px;
+    padding-top: 12px !important ;
+    padding : 0 15px 20px 15px;
+    height: 40px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: linear-gradient(145deg, #59591b, #e1eb22);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
+  
   .redirect-btn:hover {
-    background-color: #000000;
-    color: white;
+    background: linear-gradient(145deg, #e1eb22, #59591b);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   } 
   
   h2 {
