@@ -13,12 +13,14 @@ let srtared = false;
 let leval = 0;
 
 let btn12 = document.getElementById("start");
+let restart = document.querySelector("#restart");
 
 btn12.addEventListener("click", function () {
   if (srtared == false) {
     console.log("key press");
     srtared = true;
     btn12.style.display = "none";
+    restart.style.display = "inline-block"
     score.innerHTML = ``;
     hiScore.innerHTML = ``;
     title.innerHTML = ``
