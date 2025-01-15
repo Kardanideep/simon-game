@@ -3,7 +3,11 @@ let userSeq = [];
 
 let btns = ["red", "green", "yellow", "purple"];
 
-let h2 = document.querySelector("h2");
+let score = document.querySelector(".score")
+let hiScore = document.querySelector(".high-score");
+let title = document.querySelector("#game-over");
+let rMsg = document.querySelector("#rMsg");
+let levalmsg = document.querySelector(".level");
 
 let srtared = false;
 let leval = 0;
@@ -15,8 +19,15 @@ btn12.addEventListener("click", function () {
     console.log("key press");
     srtared = true;
     btn12.style.display = "none";
+    score.innerHTML = ``;
+    hiScore.innerHTML = ``;
+    title.innerHTML = ``
+    rMsg.innerHTML = "Click Restart to begin a new game and reset the score."
 
-    levalUp();
+    setTimeout(() => {
+      levalUp(); levalmsg.style.display = "inline-block";
+    }, 900);
+   
   }
 });
 
@@ -32,7 +43,7 @@ function btnFlesh(btn) {
 function levalUp() {
   userSeq = [];
   leval++;
-  h2.innerText = `level ${leval}`;
+  levalmsg.innerText = `level ${leval}`;
 
   let rendInx = Math.floor(Math.random() * 3);
   let rendColor = btns[rendInx];
@@ -50,7 +61,11 @@ function checkAns(idx) {
         setTimeout(levalUp, 1000);
       }
     } else {
-      h2.innerHTML = `Game Over! Your score was : <b>"${leval}"</b> &  Your highscore was : <b>"${hScore()}"</b> <br> Press start to play again.`;
+      title.innerHTML = `Game Over`;
+      levalmsg.style.display = "none";
+      score.innerHTML = `Your score: ${leval}`;
+      hiScore.innerHTML = `Highscore : ${hScore()}`;
+      rMsg.innerHTML = `Click start to play again`;
       document.querySelector("body").style.backgroundColor = "red";
       setTimeout(() => {
         document.querySelector("body").style.backgroundColor = "#121212";
@@ -59,7 +74,7 @@ function checkAns(idx) {
       reset();
     }
   } else {
-    h2.innerHTML = `Press the Start button to play the game`;
+    rMsg.innerText = `Click the Start button to play the game`;
   }
 }
 let highScore = 0;
@@ -96,6 +111,7 @@ function reset() {
   userSeq = [];
   leval = 0;
   btn12.style.display = "inline-block";
+
 }
 
 let button = document.querySelector("button");
