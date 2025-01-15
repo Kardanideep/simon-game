@@ -8,6 +8,7 @@ let hiScore = document.querySelector(".high-score");
 let title = document.querySelector("#game-over");
 let rMsg = document.querySelector("#rMsg");
 let levalmsg = document.querySelector(".level");
+let redirect = document.querySelector(".redirect-btn");
 
 let srtared = false;
 let leval = 0;
@@ -20,6 +21,7 @@ btn12.addEventListener("click", function () {
     console.log("key press");
     srtared = true;
     btn12.style.display = "none";
+    redirect.style.display = "none";
     restart.style.display = "inline-block"
     score.innerHTML = ``;
     hiScore.innerHTML = ``;
