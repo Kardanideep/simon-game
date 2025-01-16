@@ -33,7 +33,7 @@ Simon Game is a fun and interactive memory game that tests your ability to remem
 ```
 |-- index.html      # Main HTML file
 |-- style.css       # Game styling
-|-- app.js       # Game logic
+|-- app.js          # Game logic
 |-- index1.html     # How to play page
 |-- style1.css      # How to play page css 
 |-- README.md       # Documentation
@@ -42,3 +42,9 @@ Simon Game is a fun and interactive memory game that tests your ability to remem
 ---
 
 Enjoy the game, and test your memory skills! Feel free to reach out with suggestions or feedback.
+
+---
+
+## Contact
+- **Email**: kardanideep1@gmail.com
+
